@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>UPCAT 2014 Passers</title>
+		<title>UPCAT 2014 Qualifiers</title>
 
 		<link rel="stylesheet" href="<?=base_url()?>stylesheets/bootstrap.css" type="text/css" />
 		<link rel="stylesheet" href="<?=base_url()?>stylesheets/bootstrap-theme.css" type="text/css" />
