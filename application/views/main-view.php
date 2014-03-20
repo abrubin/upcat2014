@@ -13,80 +13,58 @@
 		<script type="text/javascript">
 			$(document).ready(function()	{
 				$('#form_submt').click(function()	{
-					alert("negro!");
 					$('#search_frm').submit();
 				});
 			});
 		</script>
 	</head>
 	<body>
-	<form id="search_frm" method="post" action="<?=base_url()?>main" role="form">
 		<div class="small-10 small-centered columns">
-			<fieldset>
-				<legend>Search</legend>
-				<div class="row">
-					<div class="small-3 columns">
-						<label for="studentno_inpt" class="right inline">Student Number</label>
-					</div>
-					<div class="small-9 columns">
-						<input type="text" id="studentno_inpt" name="studentno" placeholder="2XXX-XXXXX" />
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="small-3 columns">
-						<label for="name_inpt" class="right inline">Name</label>
-					</div>
-					<div class="small-9 columns">
-						<input type="text" id="name_inpt" name="name" placeholder="Surname, Firstname Middlename" />
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="small-3 columns">
-						<label for="campus_inpt" class="right inline">Campus</label>
-					</div>
-					<div class="small-9 columns">
-						<input type="text" id="campus_inpt" name="campus" placeholder="Diliman" />
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="small-3 columns">
-						<label for="degprog_inpt" class="right inline">Degree Program</label>
-					</div>
-					<div class="small-9 columns">
-						<input type="text" id="degprog_inpt" name="degprog" placeholder="BS Computer Science" />
-					</div>
-				</div>
-
-				<div class="row">
-					<a href="#" class="button [radius round]" id="form_submt">Search</a>
-				</div>
-			</fieldset>
-		</div>
-	</form>
-
-		<!--
-		<div id="search_tbl">
 			<form id="search_frm" method="post" action="<?=base_url()?>main" role="form">
-				<div class="form-group">
-					<label for="studentno_inpt">Student Number</label>
-					<input type="text" id="studentno_inpt" class="form-control" name="studentno" placeholder="2XXX-XXXXX">
-				</div>
-				<div class="form-group">
-					<label for="name_inpt">Full Name</label>
-					<input type="text" id="name_inpt" class="form-control" name="name" placeholder="Surname, Firstname Middlename">
-				</div>
-				<div class="form-group">
-					<label for="campus_inpt">Campus</label>
-					<input type="text" id="campus_inpt" class="form-control" name="campus" placeholder="Diliman">
-				</div>
-				<div class="form-group">
-					<label for="degprog_inpt">Degree Program</label>
-					<input type="text" id="degprog_inpt" class="form-control" name="degprog" placeholder="BS Computer Science">
-				</div>
-				<button type="submit" class="btn btn-primary">Search</button>
+				<fieldset>
+					<legend>Search</legend>
+					<div class="row">
+						<div class="small-3 columns">
+							<label for="studentno_inpt" class="right inline">Student Number</label>
+						</div>
+						<div class="small-9 columns">
+							<input type="text" id="studentno_inpt" name="studentno" placeholder="2XXX-XXXXX" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="small-3 columns">
+							<label for="name_inpt" class="right inline">Name</label>
+						</div>
+						<div class="small-9 columns">
+							<input type="text" id="name_inpt" name="name" placeholder="Surname, Firstname Middlename" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="small-3 columns">
+							<label for="campus_inpt" class="right inline">Campus</label>
+						</div>
+						<div class="small-9 columns">
+							<input type="text" id="campus_inpt" name="campus" placeholder="Diliman" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="small-3 columns">
+							<label for="degprog_inpt" class="right inline">Degree Program</label>
+						</div>
+						<div class="small-9 columns">
+							<input type="text" id="degprog_inpt" name="degprog" placeholder="BS Computer Science" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="small-12 columns">
+							<a href="#" class="button radius right" id="form_submt">Search</a>
+						</div>
+					</div>
+				</fieldset>
 			</form>
 		</div>
 
