@@ -19,6 +19,16 @@
 		</script>
 	</head>
 	<body>
+		<div class="sticky">
+			<nav class="top-bar" data-topbar>
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="<?=base_url()?>">UPCAT 2014</a></h1>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
 		<div class="small-10 small-centered columns">
 			<form id="search_frm" method="post" action="<?=base_url()?>main" role="form">
 				<fieldset>
