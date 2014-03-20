@@ -16,7 +16,7 @@ class Main extends CI_Controller	{
 			$degprog = $this->input->post('degprog');
 
 			if(empty($studentno) && empty($name) && empty($campus) && empty($degprog))
-				redirect('main');
+				redirect();
 
 			$students = $this->main_model->getStudents(-1, $studentno, $name, $campus, $degprog);
 		}
@@ -26,13 +26,13 @@ class Main extends CI_Controller	{
 			$config['base_url'] = base_url().'main/index/';
 			$config['per_page'] = 100;
 			$config['use_page_numbers'] = TRUE;
-			$config['num_links'] = 2;
+			$config['num_links'] = 1;
 			$config['total_rows'] = $this->main_model->getCount();
 			$config['full_tag_open'] = '<ul class="pagination">';
 			$config['full_tag_close'] = '</ul>';
 			$config['num_tag_open'] = '<li>';
 			$config['num_tag_close'] = '</li>';
-			$config['cur_tag_open'] = '<li class="active"><a href="#">';
+			$config['cur_tag_open'] = '<li class="current"><a href="">';
 			$config['cur_tag_close'] = '</a></li>';
 			$config['first_link'] = '&laquo; First';
 			$config['first_tag_open'] = '<li>';
