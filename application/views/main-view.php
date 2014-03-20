@@ -3,30 +3,72 @@
 	<head>
 		<title>UPCAT 2014 Qualifiers</title>
 
-		<link rel="stylesheet" href="<?=base_url()?>stylesheets/bootstrap.css" type="text/css" />
-		<link rel="stylesheet" href="<?=base_url()?>stylesheets/bootstrap-theme.css" type="text/css" />
+		<link rel="stylesheet" href="<?=base_url()?>css/normalize.css">
+		<link rel="stylesheet" href="<?=base_url()?>css/foundation.css">
 
-		<script type="text/javascript" src="<?=base_url()?>scripts/jquery-2.0.3.js"></script>
-		<script type="text/javascript" src="<?=base_url()?>scripts/bootstrap.js"></script>
-		<script type="text/javascript" src="<?=base_url()?>scripts/tablesorter/jquery.tablesorter.js"></script>
+		<script type="text/javascript" src="<?=base_url()?>js/vendor/modernizr.js"></script>
+		<script type="text/javascript" src="<?=base_url()?>js/vendor/jquery.js"></script>
+		<script type="text/javascript" src="<?=base_url()?>js/tablesorter/jquery.tablesorter.js"></script>
+
 		<script type="text/javascript">
 			$(document).ready(function()	{
-				$("#allstudents").tablesorter();
-				$('#search_frm').tablesorter();
+				$('#form_submt').click(function()	{
+					alert("negro!");
+					$('#search_frm').submit();
+				});
 			});
 		</script>
-
-		<style type="text/css">
-			#search_tbl	{
-				padding: 10px;
-			}
-			#allstudents thead tr th 	{
-				cursor: pointer;
-			}
-		</style>
 	</head>
 	<body>
-		<div id="search_tbl" class="container col-md-2">
+	<form id="search_frm" method="post" action="<?=base_url()?>main" role="form">
+		<div class="small-10 small-centered columns">
+			<fieldset>
+				<legend>Search</legend>
+				<div class="row">
+					<div class="small-3 columns">
+						<label for="studentno_inpt" class="right inline">Student Number</label>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" id="studentno_inpt" name="studentno" placeholder="2XXX-XXXXX" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="small-3 columns">
+						<label for="name_inpt" class="right inline">Name</label>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" id="name_inpt" name="name" placeholder="Surname, Firstname Middlename" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="small-3 columns">
+						<label for="campus_inpt" class="right inline">Campus</label>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" id="campus_inpt" name="campus" placeholder="Diliman" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="small-3 columns">
+						<label for="degprog_inpt" class="right inline">Degree Program</label>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" id="degprog_inpt" name="degprog" placeholder="BS Computer Science" />
+					</div>
+				</div>
+
+				<div class="row">
+					<a href="#" class="button [radius round]" id="form_submt">Search</a>
+				</div>
+			</fieldset>
+		</div>
+	</form>
+
+		<!--
+		<div id="search_tbl">
 			<form id="search_frm" method="post" action="<?=base_url()?>main" role="form">
 				<div class="form-group">
 					<label for="studentno_inpt">Student Number</label>
@@ -48,7 +90,8 @@
 			</form>
 		</div>
 
-		<div id="result_tbl" class="container col-md-10">
+		<!--
+		<div id="result_tbl" class="container-fluid col-md-10">
 			<table id="allstudents" class="tablesorter table table-striped">
 				<thead>
 					<tr>
@@ -79,5 +122,12 @@
 				<?=$this->pagination->create_links()?>
 			<? endif ?>
 		</div>
+		-->
+
+		<script type="text/javascript" src="<?=base_url()?>js/vendor/fastclick.js"></script>
+		<script type="text/javascript" src="<?=base_url()?>js/foundation.min.js"></script>
+		<script type="text/javascript">
+			$(document).foundation();
+		</script>
 	</body>
 </html>
