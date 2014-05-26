@@ -176,27 +176,27 @@
 										</tr>
 									</thead>
 									<tbody>
-										<? if(!$students): ?>
+										<?php if(!$students): ?>
 											<tr>
 												<td colspan="4" style="text-align: center;">No students found</td>
 											</tr>
-										<? else: ?>
-											<? foreach($students as $student): ?>
+										<?php else: ?>
+											<?php foreach($students as $student): ?>
 												<tr>
 													<td><?=$student['studentno']?></td>
 													<td><?=$student['name']?></td>
 													<td><?=$student['campus']?></td>
 													<td><?=$student['degprog']?></td>
 												</tr>
-											<? endforeach ?>
-										<? endif ?>
+											<?php endforeach ?>
+										<?php endif ?>
 									</tbody>
 								</table>
-								<? if(isset($this->pagination)): ?>
+								<?php if(isset($this->pagination)): ?>
 									<div class="medium-7 medium-centered columns">
 										<?=$this->pagination->create_links()?>
 									</div>
-								<? endif ?>
+								<?php endif ?>
 							</div>
 						</div>
 					</section>
